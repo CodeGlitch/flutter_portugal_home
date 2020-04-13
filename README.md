@@ -9,4 +9,10 @@
 * Add file 'android/app/google-services.json'.
 * Works like a usual Flutter app
 
+### Extra:
+* When publishing changed the id value on 'main.dart.js?id=xx' in the index.html.
+  * Because web is web, and web gona cache, this forces the .js file to be refreshed on the user side.
+* Might have to manually add SEO stuff on the index.html file
+  * Because web is web, and the index file is mostly empty until the js is loaded, meaning search engines will see nothing.
+
 PS: I hate design x)
