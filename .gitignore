@@ -19,3 +19,5 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+web/resources/js/firebase_config.js
+android/app/google-services.json
