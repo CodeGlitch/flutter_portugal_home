@@ -1,3 +1,6 @@
+### TODO:
+* replace usage of responsive_grid with a simple Wrap
+
 # WIP - To run this project you:
 ## 1-Web:
 * Add file 'web/resources/js/firebase_config.js' with firebase info.
