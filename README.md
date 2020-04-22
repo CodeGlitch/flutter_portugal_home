@@ -1,6 +1,7 @@
 ### TODO:
-* replace usage of responsive_grid with a simple Wrap
-* replace responsive_framework with some extra code instead? TBD
+* replace usage of responsive_grid with a simple Wrap.
+* create models for data, *I'm too lazy for models.*
+* replace responsive_framework with some extra code instead? *TBD*
 
 # WIP - To run this project you:
 ## 1-Web:
