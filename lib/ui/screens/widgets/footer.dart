@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portugal_home/resources/dimensions.dart';
 import 'package:flutter_portugal_home/resources/routes.dart';
 import 'package:flutter_portugal_home/resources/strings.dart';
 import 'package:flutter_portugal_home/resources/style/colors.dart';
@@ -23,14 +24,14 @@ class Footer {
                     ),
               ),
             ),
-            SizedBox(width: 20),
+            SizedBox(width: footerDividerSize),
             Text(
               flutterPTtext,
               style: Theme.of(context).textTheme.headline6.copyWith(
                     color: FlutterPTColors.blue,
                   ),
             ),
-            SizedBox(width: 20),
+            SizedBox(width: footerDividerSize),
             FlatButton(
               onPressed: () {
                 launchURL(footerBlog);

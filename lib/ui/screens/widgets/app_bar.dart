@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portugal_home/resources/dimensions.dart';
 import 'package:flutter_portugal_home/resources/routes.dart';
 import 'package:flutter_portugal_home/resources/style/colors.dart';
 import 'flutter_portugal_text.dart';
@@ -8,7 +9,7 @@ class MyAppBar {
     MediaQueryData queryData;
     queryData = MediaQuery.of(context);
     return AppBar(
-      automaticallyImplyLeading: (queryData.size.width >= 980) ? false : true,
+      automaticallyImplyLeading: (queryData.size.width >= maxPageBody) ? false : true,
       elevation: 0.0,
       iconTheme: Theme.of(context).iconTheme.copyWith(
             color: FlutterPTColors.darkGrey,
@@ -19,17 +20,17 @@ class MyAppBar {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           FlutterPortugalText(),
-          (queryData.size.width >= 980)
+          (queryData.size.width >= maxPageBody)
               ? Expanded(child: Container(), flex: 5)
               : Container(),
           menuItem(context, queryData, routeHome, "Home"),
-          (queryData.size.width >= 980) ? SizedBox(width: 15) : Container(),
+          (queryData.size.width >= maxPageBody) ? SizedBox(width: menuDividerSize) : Container(),
           menuItem(context, queryData, routeLearn, "Learn"),
-          (queryData.size.width >= 980) ? SizedBox(width: 15) : Container(),
+          (queryData.size.width >= maxPageBody) ? SizedBox(width: menuDividerSize) : Container(),
           menuItem(context, queryData, routeJobs, "Jobs"),
-          (queryData.size.width >= 980) ? SizedBox(width: 15) : Container(),
+          (queryData.size.width >= maxPageBody) ? SizedBox(width: menuDividerSize) : Container(),
           menuItem(context, queryData, routeProjects, "Projects"),
-          (queryData.size.width >= 980) ? SizedBox(width: 15) : Container(),
+          (queryData.size.width >= maxPageBody) ? SizedBox(width: menuDividerSize) : Container(),
           menuItem(context, queryData, routeAbout, "About"),
         ],
       ),
@@ -37,7 +38,7 @@ class MyAppBar {
   }
 
   static menuItem(context, queryData, String route, String text) {
-    return (queryData.size.width >= 980)
+    return (queryData.size.width >= maxPageBody)
         ? FlatButton(
             onPressed: () {
               Navigator.of(context).pushNamed(route);

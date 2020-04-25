@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portugal_home/provider/jobs_provider.dart';
+import 'package:flutter_portugal_home/resources/dimensions.dart';
 import 'package:flutter_portugal_home/resources/strings.dart';
 import 'package:flutter_portugal_home/ui/screens/jobs/components/job_offer_contact_us.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/app_bar.dart';
@@ -21,7 +22,7 @@ class JobsPage extends StatelessWidget {
       drawer: MyDrawer.drawer(context),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(bodyPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[

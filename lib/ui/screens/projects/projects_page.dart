@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portugal_home/provider/projects_provider.dart';
+import 'package:flutter_portugal_home/resources/dimensions.dart';
 import 'package:flutter_portugal_home/resources/strings.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/app_bar.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/drawer.dart';
@@ -20,7 +21,7 @@ class ProjectsPage extends StatelessWidget {
       drawer: MyDrawer.drawer(context),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(bodyPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[

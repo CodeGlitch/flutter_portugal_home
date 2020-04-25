@@ -1,5 +1,5 @@
 ### TODO:
-* replace usage of responsive_grid with a simple Wrap.
+* <s>replace usage of responsive_grid with a simple Wrap.</s>
 * create models for data, *I'm too lazy for models.*
 * replace responsive_framework with some extra code instead? *TBD*
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portugal_home/resources/dimensions.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/app_bar.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/drawer.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/footer.dart';
@@ -20,7 +21,7 @@ class HomePage extends StatelessWidget {
         shrinkWrap: false,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(bodyPadding),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[

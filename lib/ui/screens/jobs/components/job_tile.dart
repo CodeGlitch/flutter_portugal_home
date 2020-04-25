@@ -17,7 +17,6 @@ class JobTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(lastUpdate);
     ///TODO:
     return Container(
       decoration: BoxDecoration(
