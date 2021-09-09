@@ -39,13 +39,13 @@ class MyAppBar {
 
   static menuItem(context, queryData, String route, String text) {
     return (queryData.size.width >= maxPageBody)
-        ? FlatButton(
+        ? TextButton(
             onPressed: () {
               Navigator.of(context).pushNamed(route);
             },
             child: Text(
               text,
-              style: Theme.of(context).textTheme.headline6.copyWith(
+              style: Theme.of(context).textTheme.headline6!.copyWith(
                     color: FlutterPTColors.blue,
                   ),
             ),

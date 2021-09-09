@@ -25,7 +25,7 @@ class FlutterPortugal extends StatelessWidget {
       theme: Themes.defaultAppTheme(context),
       initialRoute: routeHome,
       onGenerateRoute: (settings) {
-        var page;
+        late var page;
         switch (settings.name) {
           case routeHome:
             page = HomePage();
@@ -58,15 +58,14 @@ class FlutterPortugal extends StatelessWidget {
         return MaterialPageRoute(builder: (_) => page, settings: settings);
       },
       builder: (context, widget) => ResponsiveWrapper.builder(
-        BouncingScrollWrapper.builder(context, widget),
+        BouncingScrollWrapper.builder(context, widget!),
         maxWidth: 980,
         minWidth: 450,
         defaultScale: true,
         breakpoints: [
-          ResponsiveBreakpoint(breakpoint: 450, name: MOBILE, autoScale: true),
-          ResponsiveBreakpoint(breakpoint: 900, name: TABLET, autoScale: true),
-          ResponsiveBreakpoint(
-              breakpoint: 980, name: DESKTOP, autoScale: false),
+          ResponsiveBreakpoint.resize(450, name: MOBILE),
+          ResponsiveBreakpoint.resize( 900, name: TABLET),
+          ResponsiveBreakpoint.resize( 980, name: DESKTOP),
         ],
         background: Container(
           color: FlutterPTColors.white,

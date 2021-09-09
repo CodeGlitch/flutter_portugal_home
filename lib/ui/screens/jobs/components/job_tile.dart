@@ -5,12 +5,12 @@ import 'package:flutter_portugal_home/resources/style/colors.dart';
 import 'package:flutter_portugal_home/utils/launch_url.dart';
 
 class JobTile extends StatelessWidget {
-  final String description;
-  final String htmlBody;
-  final String image;
-  final String lastUpdate;
-  final String name;
-  final String url;
+  final String? description;
+  final String? htmlBody;
+  final String? image;
+  final String? lastUpdate;
+  final String? name;
+  final String? url;
 
   JobTile(this.name, this.description, this.image, this.htmlBody,
       this.lastUpdate, this.url);
@@ -38,10 +38,10 @@ class JobTile extends StatelessWidget {
             Column(
               children: <Widget>[
                 Text(
-                  name,
+                  name!,
                 ),
                 Text(
-                  description,
+                  description!,
                 ),
               ],
             ),
@@ -52,14 +52,14 @@ class JobTile extends StatelessWidget {
                     Text(
                       lastUpdate.toString(),
                     ),
-                    FlatButton(
+                    TextButton(
                       onPressed: () {
-                        launchURL(url);
+                        launchURL(url!);
                       },
                       child: Text(
                         "APPLY",
                         textAlign: TextAlign.start,
-                        style: Theme.of(context).textTheme.bodyText2.copyWith(
+                        style: Theme.of(context).textTheme.bodyText2!.copyWith(
                               color: FlutterPTColors.blue,
                             ),
                       ),
@@ -71,15 +71,16 @@ class JobTile extends StatelessWidget {
           ],
         ),
         children: <Widget>[
+          /// TODO needs work after update
           Html(
-            useRichText: true,
+            //useRichText: true,
             data: htmlBody,
-            defaultTextStyle: Theme.of(context).textTheme.bodyText2,
-            onLinkTap: launchURL,
-            linkStyle: Theme.of(context)
+            //defaultTextStyle: Theme.of(context).textTheme.bodyText2,
+            //onLinkTap: launchURL,
+            /*linkStyle: Theme.of(context)
                 .textTheme
                 .bodyText2
-                .copyWith(color: FlutterPTColors.blue),
+                .copyWith(color: FlutterPTColors.blue),*/
           ),
         ],
       ),

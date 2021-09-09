@@ -27,13 +27,13 @@ class TopText extends StatelessWidget {
             color: FlutterPTColors.black,
           ),
         ),
-        RaisedButton(
+        ElevatedButton(
           onPressed: () {
             launchURL(url);
           },
           child: Text(
             "GITHUB",
-            style: Theme.of(context).textTheme.headline6.copyWith(
+            style: Theme.of(context).textTheme.headline6!.copyWith(
                   color: FlutterPTColors.blue,
                 ),
           ),

@@ -5,7 +5,7 @@ import 'package:flutter_portugal_home/resources/style/text_styles.dart';
 import 'package:flutter_portugal_home/utils/launch_url.dart';
 
 class Meetup extends StatelessWidget {
-  const Meetup({Key key}) : super(key: key);
+  const Meetup({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,9 +22,9 @@ class Meetup extends StatelessWidget {
             color: FlutterPTColors.black,
           ),
         ),
-        RaisedButton(
-          color: FlutterPTColors.blue,
-          textColor: FlutterPTColors.white,
+        ElevatedButton(
+          //color: FlutterPTColors.blue,
+          //textColor: FlutterPTColors.white,
           onPressed: () {
             launchURL(meetupUrl);
           },

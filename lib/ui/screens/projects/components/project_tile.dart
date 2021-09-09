@@ -5,10 +5,10 @@ import 'package:flutter_portugal_home/utils/launch_url.dart';
 
 class ProjectTile extends StatelessWidget {
   final int index;
-  final String name;
-  final String description;
-  final String url;
-  final String image;
+  final String? name;
+  final String? description;
+  final String? url;
+  final String? image;
 
   const ProjectTile(
       this.index, this.name, this.description, this.url, this.image);
@@ -52,24 +52,24 @@ class ProjectTile extends StatelessWidget {
     return Column(
       children: <Widget>[
         Text(
-          name,
+          name!,
           style: TextStyles.bodyText1(
             color: FlutterPTColors.blue,
           ),
         ),
         Text(
-          description,
+          description!,
           style: TextStyles.bodyText2(
             color: FlutterPTColors.black,
           ),
         ),
-        RaisedButton(
+        ElevatedButton(
           onPressed: () {
-            launchURL(url);
+            launchURL(url!);
           },
           child: Text(
             "GITHUB",
-            style: Theme.of(context).textTheme.headline6.copyWith(
+            style: Theme.of(context).textTheme.headline6!.copyWith(
                   color: FlutterPTColors.blue,
                 ),
           ),

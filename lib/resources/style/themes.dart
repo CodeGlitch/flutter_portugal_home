@@ -34,7 +34,7 @@ class Themes {
   static ThemeData defaultAppTheme(context) {
     return ThemeData(
       primaryColor: colorPrimary,
-      accentColor: colorPrimary,
+      //accentColor: colorPrimary,
       textTheme: GoogleFonts.robotoTextTheme(
         Theme.of(context).textTheme,
       ),

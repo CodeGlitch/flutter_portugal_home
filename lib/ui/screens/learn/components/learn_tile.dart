@@ -4,10 +4,10 @@ import 'package:flutter_portugal_home/resources/style/colors.dart';
 import 'package:flutter_portugal_home/utils/launch_url.dart';
 
 class LearnTile extends StatelessWidget {
-  final String name;
-  final String url;
-  final String image;
-  const LearnTile(this.name, this.url, this.image, {Key key}) : super(key: key);
+  final String? name;
+  final String? url;
+  final String? image;
+  const LearnTile(this.name, this.url, this.image, {Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,19 +25,19 @@ class LearnTile extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(textLeftPadding, 0, 0, 0),
             child: Text(
-              name,
-              style: Theme.of(context).textTheme.headline6.copyWith(
+              name!,
+              style: Theme.of(context).textTheme.headline6!.copyWith(
                     color: FlutterPTColors.black,
                   ),
             ),
           ),
-          FlatButton(
+          TextButton(
             onPressed: () {
-              launchURL(url);
+              launchURL(url!);
             },
             child: Text(
               "Website >",
-              style: Theme.of(context).textTheme.bodyText2.copyWith(
+              style: Theme.of(context).textTheme.bodyText2!.copyWith(
                     color: FlutterPTColors.blue,
                   ),
             ),

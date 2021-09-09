@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portugal_home/resources/dimensions.dart';
 
 class BGImage extends StatelessWidget {
-  const BGImage({Key key}) : super(key: key);
+  const BGImage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

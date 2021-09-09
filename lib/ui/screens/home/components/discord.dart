@@ -5,7 +5,7 @@ import 'package:flutter_portugal_home/resources/style/text_styles.dart';
 import 'package:flutter_portugal_home/utils/launch_url.dart';
 
 class Discord extends StatelessWidget {
-  const Discord({Key key}) : super(key: key);
+  const Discord({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,9 +22,9 @@ class Discord extends StatelessWidget {
             color: FlutterPTColors.black,
           ),
         ),
-        RaisedButton(
-          color: FlutterPTColors.blue,
-          textColor: FlutterPTColors.white,
+        ElevatedButton(
+          //color: FlutterPTColors.blue,
+          //textColor: FlutterPTColors.white,
           onPressed: () {
             launchURL(discordUrl);
           },

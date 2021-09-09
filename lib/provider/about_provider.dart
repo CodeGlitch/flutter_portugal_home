@@ -5,10 +5,10 @@ class AboutProvider with ChangeNotifier {
   List data = [];
   getOrganizer() async {
     Stream<QuerySnapshot> query =
-        Firestore.instance.collection('organizers').snapshots();
+    FirebaseFirestore.instance.collection('organizers').snapshots();
     query.listen(
       (event) {
-        data = event.documents.toList();
+        data = event.docs.toList();
         notifyListeners();
       },
     );

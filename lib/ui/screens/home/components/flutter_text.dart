@@ -3,7 +3,7 @@ import 'package:flutter_portugal_home/resources/style/colors.dart';
 import 'package:flutter_portugal_home/resources/style/text_styles.dart';
 
 class FlutterText extends StatelessWidget {
-  const FlutterText({Key key}) : super(key: key);
+  const FlutterText({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Row(

@@ -4,7 +4,7 @@ import 'meetup.dart';
 import 'twitter.dart';
 
 class SocialMedia extends StatelessWidget {
-  const SocialMedia({Key key}) : super(key: key);
+  const SocialMedia({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     MediaQueryData queryData;

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portugal_home/resources/style/colors.dart';
 
 class SeperatorRow extends StatelessWidget {
-  const SeperatorRow({Key key}) : super(key: key);
+  const SeperatorRow({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Divider(
@@ -13,7 +13,7 @@ class SeperatorRow extends StatelessWidget {
 }
 
 class SeperatorRowEmpty extends StatelessWidget {
-  const SeperatorRowEmpty({Key key}) : super(key: key);
+  const SeperatorRowEmpty({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     MediaQueryData queryData;

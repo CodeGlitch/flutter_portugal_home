@@ -4,15 +4,15 @@ import 'package:flutter_portugal_home/resources/style/colors.dart';
 import 'package:flutter_portugal_home/utils/launch_url.dart';
 
 class OrganizerTile extends StatelessWidget {
-  final String name;
-  final String description;
-  final String image;
-  final String social1;
-  final String social2;
-  final String social3;
+  final String? name;
+  final String? description;
+  final String? image;
+  final String? social1;
+  final String? social2;
+  final String? social3;
   const OrganizerTile(this.name, this.description, this.image, this.social1,
       this.social2, this.social3,
-      {Key key})
+      {Key? key})
       : super(key: key);
 
   @override
@@ -32,28 +32,28 @@ class OrganizerTile extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(textLeftPadding, 0, 0, 0),
             child: Text(
-              name,
-              style: Theme.of(context).textTheme.headline6.copyWith(
+              name!,
+              style: Theme.of(context).textTheme.headline6!.copyWith(
                     color: FlutterPTColors.blue,
                   ),
             ),
           ),
           Text(
-            description,
-            style: Theme.of(context).textTheme.bodyText2.copyWith(
+            description!,
+            style: Theme.of(context).textTheme.bodyText2!.copyWith(
                   color: FlutterPTColors.black,
                 ),
           ),
           Wrap(
             children: [
               social1 != null
-                  ? FlatButton(
+                  ? TextButton(
                       onPressed: () {
-                        launchURL(social1);
+                        launchURL(social1!);
                       },
                       child: Text(
                         "Social",
-                        style: Theme.of(context).textTheme.bodyText2.copyWith(
+                        style: Theme.of(context).textTheme.bodyText2!.copyWith(
                               color: FlutterPTColors.blue,
                             ),
                         textAlign: TextAlign.start,
@@ -61,28 +61,28 @@ class OrganizerTile extends StatelessWidget {
                     )
                   : Container(),
               social2 != null
-                  ? FlatButton(
+                  ? TextButton(
                       onPressed: () {
-                        launchURL(social2);
+                        launchURL(social2!);
                       },
                       child: Text(
                         "Social",
                         textAlign: TextAlign.start,
-                        style: Theme.of(context).textTheme.bodyText2.copyWith(
+                        style: Theme.of(context).textTheme.bodyText2!.copyWith(
                               color: FlutterPTColors.blue,
                             ),
                       ),
                     )
                   : Container(),
               social3 != null
-                  ? FlatButton(
+                  ? TextButton(
                       onPressed: () {
-                        launchURL(social3);
+                        launchURL(social3!);
                       },
                       child: Text(
                         "Social",
                         textAlign: TextAlign.start,
-                        style: Theme.of(context).textTheme.bodyText2.copyWith(
+                        style: Theme.of(context).textTheme.bodyText2!.copyWith(
                               color: FlutterPTColors.blue,
                             ),
                       ),

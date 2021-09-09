@@ -5,10 +5,10 @@ class JobsProvider with ChangeNotifier {
   List data = [];
   getJobs() async {
     Stream<QuerySnapshot> query =
-        Firestore.instance.collection('jobs').snapshots();
+    FirebaseFirestore.instance.collection('jobs').snapshots();
     query.listen(
       (event) {
-        data = event.documents.toList();
+        data = event.docs.toList();
         notifyListeners();
       },
     );

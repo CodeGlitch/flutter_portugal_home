@@ -13,13 +13,13 @@ class Footer {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            FlatButton(
+            TextButton(
               onPressed: () {
                 Navigator.of(context).pushNamed(routeAbout);
               },
               child: Text(
                 "About",
-                style: Theme.of(context).textTheme.bodyText2.copyWith(
+                style: Theme.of(context).textTheme.bodyText2!.copyWith(
                       color: FlutterPTColors.blue,
                     ),
               ),
@@ -27,18 +27,18 @@ class Footer {
             SizedBox(width: footerDividerSize),
             Text(
               flutterPTtext,
-              style: Theme.of(context).textTheme.headline6.copyWith(
+              style: Theme.of(context).textTheme.headline6!.copyWith(
                     color: FlutterPTColors.blue,
                   ),
             ),
             SizedBox(width: footerDividerSize),
-            FlatButton(
+            TextButton(
               onPressed: () {
                 launchURL(footerBlog);
               },
               child: Text(
                 "Blog",
-                style: Theme.of(context).textTheme.bodyText2.copyWith(
+                style: Theme.of(context).textTheme.bodyText2!.copyWith(
                       color: FlutterPTColors.blue,
                     ),
               ),
@@ -54,7 +54,7 @@ class Footer {
           children: <Widget>[
             Text(
               footerPrivacy,
-              style: Theme.of(context).textTheme.bodyText2.copyWith(
+              style: Theme.of(context).textTheme.bodyText2!.copyWith(
                     color: FlutterPTColors.blue,
                   ),
             ),

@@ -5,10 +5,10 @@ class LearnProvider with ChangeNotifier {
   List data = [];
   getLearn() async {
     Stream<QuerySnapshot> query =
-        Firestore.instance.collection('learn').snapshots();
+    FirebaseFirestore.instance.collection('learn').snapshots();
     query.listen(
       (event) {
-        data = event.documents.toList();
+        data = event.docs.toList();
         notifyListeners();
       },
     );

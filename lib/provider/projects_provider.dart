@@ -5,10 +5,10 @@ class ProjectsProvider with ChangeNotifier {
   List data = [];
   getProjects() async {
     Stream<QuerySnapshot> query =
-        Firestore.instance.collection('projects').snapshots();
+    FirebaseFirestore.instance.collection('projects').snapshots();
     query.listen(
       (event) {
-        data = event.documents.toList();
+        data = event.docs.toList();
         notifyListeners();
       },
     );
