@@ -30,12 +30,12 @@ class AboutPage extends StatelessWidget {
                 children: [
                   for (int i = 0; i < about.data.length; i++) ...[
                     OrganizerTile(
-                      about.data[i]['name'],
-                      about.data[i]['description'],
-                      about.data[i]['image'],
-                      about.data[i]['social1'],
-                      about.data[i]['social2'],
-                      about.data[i]['social3'],
+                      about.data[i].name,
+                      about.data[i].description,
+                      about.data[i].image,
+                      about.data[i].github,
+                      about.data[i].twitter,
+                      about.data[i].linkedin,
                     ),
                   ],
                 ],

@@ -29,12 +29,12 @@ class JobsPage extends StatelessWidget {
               TopText(jobsTitle),
               for (int i = 0; i < jobs.data.length; i++) ...[
                 JobTile(
-                  jobs.data[i]['name'],
-                  jobs.data[i]['description'],
-                  jobs.data[i]['image'],
-                  jobs.data[i]['html_body'],
-                  jobs.data[i]['last_update'],
-                  jobs.data[i]['url'],
+                  jobs.data[i].name,
+                  jobs.data[i].description,
+                  jobs.data[i].image,
+                  jobs.data[i].htmlBody,
+                  jobs.data[i].lastUpdate,
+                  jobs.data[i].url,
                 ),
               ],
               SeperatorRow(),

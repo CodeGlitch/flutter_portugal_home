@@ -32,9 +32,9 @@ class LearnPage extends StatelessWidget {
                 children: [
                   for (int i = 0; i < learn.data.length; i++) ...[
                     LearnTile(
-                      learn.data[i]['name'],
-                      learn.data[i]['url'],
-                      learn.data[i]['image'],
+                      learn.data[i].name,
+                      learn.data[i].url,
+                      learn.data[i].image,
                     ),
                   ],
                 ],

@@ -30,10 +30,10 @@ class ProjectsPage extends StatelessWidget {
                 /// TODO
                 ProjectTile(
                     i,
-                    projects.data[i]['name'],
-                    projects.data[i]['description'],
-                    projects.data[i]['url'],
-                    projects.data[i]['image']),
+                    projects.data[i].name,
+                    projects.data[i].description,
+                    projects.data[i].url,
+                    projects.data[i].image),
               ],
             ],
           ),
