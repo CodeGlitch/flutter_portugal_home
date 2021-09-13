@@ -6,6 +6,7 @@ import 'package:flutter_portugal_home/ui/screens/widgets/app_bar.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/drawer.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/footer.dart';
 import 'package:provider/provider.dart';
+
 import 'components/organizer_tile.dart';
 import 'components/top_text.dart';
 
@@ -28,6 +29,7 @@ class AboutPage extends StatelessWidget {
               Wrap(
                 /// TODO
                 children: [
+                  Container(),
                   for (int i = 0; i < about.data.length; i++) ...[
                     OrganizerTile(
                       about.data[i].name,
@@ -37,7 +39,7 @@ class AboutPage extends StatelessWidget {
                       about.data[i].twitter,
                       about.data[i].linkedin,
                     ),
-                  ],
+                  ]
                 ],
               ),
             ],

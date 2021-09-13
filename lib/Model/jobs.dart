@@ -4,9 +4,11 @@
 
 import 'dart:convert';
 
-List<Job> jobFromJson(String str) => List<Job>.from(json.decode(str).map((x) => Job.fromJson(x)));
+List<Job> jobFromJson(String str) =>
+    List<Job>.from(json.decode(str).map((x) => Job.fromJson(x)));
 
-String jobToJson(List<Job> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String jobToJson(List<Job> data) =>
+    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class Job {
   Job({
@@ -26,20 +28,20 @@ class Job {
   String url;
 
   factory Job.fromJson(Map<String, dynamic> json) => Job(
-    name: json["name"],
-    description: json["description"],
-    image: json["image"],
-    htmlBody: json["html_body"],
-    lastUpdate: json["last_update"],
-    url: json["url"],
-  );
+        name: json["name"],
+        description: json["description"],
+        image: json["image"],
+        htmlBody: json["html_body"],
+        lastUpdate: json["last_update"],
+        url: json["url"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "name": name,
-    "description": description,
-    "image": image,
-    "html_body": htmlBody,
-    "last_update": lastUpdate,
-    "url": url,
-  };
+        "name": name,
+        "description": description,
+        "image": image,
+        "html_body": htmlBody,
+        "last_update": lastUpdate,
+        "url": url,
+      };
 }

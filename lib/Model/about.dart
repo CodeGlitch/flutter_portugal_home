@@ -4,9 +4,11 @@
 
 import 'dart:convert';
 
-List<About> aboutFromJson(String str) => List<About>.from(json.decode(str).map((x) => About.fromJson(x)));
+List<About> aboutFromJson(String str) =>
+    List<About>.from(json.decode(str).map((x) => About.fromJson(x)));
 
-String aboutToJson(List<About> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String aboutToJson(List<About> data) =>
+    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class About {
   About({
@@ -26,20 +28,20 @@ class About {
   String twitter;
 
   factory About.fromJson(Map<String, dynamic> json) => About(
-    name: json["name"],
-    description: json["description"],
-    image: json["image"],
-    github: json["github"],
-    linkedin: json["linkedin"],
-    twitter: json["twitter"],
-  );
+        name: json["name"],
+        description: json["description"],
+        image: json["image"],
+        github: json["github"],
+        linkedin: json["linkedin"],
+        twitter: json["twitter"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "name": name,
-    "description": description,
-    "image": image,
-    "github": github,
-    "linkedin": linkedin,
-    "twitter": twitter,
-  };
+        "name": name,
+        "description": description,
+        "image": image,
+        "github": github,
+        "linkedin": linkedin,
+        "twitter": twitter,
+      };
 }

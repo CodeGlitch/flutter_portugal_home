@@ -8,6 +8,7 @@ import 'package:flutter_portugal_home/ui/screens/widgets/drawer.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/footer.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/seperator.dart';
 import 'package:provider/provider.dart';
+
 import 'components/job_tile.dart';
 import 'components/top_text.dart';
 
@@ -26,6 +27,8 @@ class JobsPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              JobOfferContactUs(),
+              SeperatorRow(),
               TopText(jobsTitle),
               for (int i = 0; i < jobs.data.length; i++) ...[
                 JobTile(
@@ -37,8 +40,6 @@ class JobsPage extends StatelessWidget {
                   jobs.data[i].url,
                 ),
               ],
-              SeperatorRow(),
-              JobOfferContactUs()
             ],
           ),
         ),

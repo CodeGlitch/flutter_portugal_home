@@ -7,11 +7,11 @@ class OrganizerTile extends StatelessWidget {
   final String? name;
   final String? description;
   final String? image;
-  final String? social1;
-  final String? social2;
-  final String? social3;
-  const OrganizerTile(this.name, this.description, this.image, this.social1,
-      this.social2, this.social3,
+  final String? github;
+  final String? twitter;
+  final String? linkedin;
+  const OrganizerTile(this.name, this.description, this.image, this.github,
+      this.twitter, this.linkedin,
       {Key? key})
       : super(key: key);
 
@@ -23,9 +23,8 @@ class OrganizerTile extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Image.asset(
-            ///TODO:
-            "assets/background.jpg",
+          Image.network(
+            image!,
             height: organizerImgHeight,
             width: organizerImgWidth,
           ),
@@ -38,18 +37,12 @@ class OrganizerTile extends StatelessWidget {
                   ),
             ),
           ),
-          Text(
-            description!,
-            style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                  color: FlutterPTColors.black,
-                ),
-          ),
           Wrap(
             children: [
-              social1 != null
+              github != null
                   ? TextButton(
                       onPressed: () {
-                        launchURL(social1!);
+                        launchURL(github!);
                       },
                       child: Text(
                         "Social",
@@ -60,10 +53,10 @@ class OrganizerTile extends StatelessWidget {
                       ),
                     )
                   : Container(),
-              social2 != null
+              twitter != null
                   ? TextButton(
                       onPressed: () {
-                        launchURL(social2!);
+                        launchURL(twitter!);
                       },
                       child: Text(
                         "Social",
@@ -74,10 +67,10 @@ class OrganizerTile extends StatelessWidget {
                       ),
                     )
                   : Container(),
-              social3 != null
+              linkedin != null
                   ? TextButton(
                       onPressed: () {
-                        launchURL(social3!);
+                        launchURL(linkedin!);
                       },
                       child: Text(
                         "Social",
@@ -89,6 +82,12 @@ class OrganizerTile extends StatelessWidget {
                     )
                   : Container(),
             ],
+          ),
+          Text(
+            description!,
+            style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                  color: FlutterPTColors.black,
+                ),
           ),
         ],
       ),

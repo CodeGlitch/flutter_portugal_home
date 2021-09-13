@@ -21,3 +21,5 @@ doc/api/
 *.js.map
 web/resources/js/firebase_config.js
 android/app/google-services.json
+.DS_Store
+android/app/google-services.json

@@ -17,7 +17,7 @@ class ProjectTile extends StatelessWidget {
   Widget build(BuildContext context) {
     if (index.isEven) {
       return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           projectImage(),
           projectText(context),
@@ -37,10 +37,8 @@ class ProjectTile extends StatelessWidget {
     return Column(
       children: <Widget>[
         Center(
-          child: Image.asset(
-            "assets/background.jpg",
-
-            /// TODO: use target from url?
+          child: Image.network(
+            image!,
             height: 150,
           ),
         ),

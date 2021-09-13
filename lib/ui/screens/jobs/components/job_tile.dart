@@ -19,19 +19,18 @@ class JobTile extends StatelessWidget {
   Widget build(BuildContext context) {
     ///TODO:
     return Container(
-      decoration: BoxDecoration(
+      /*decoration: BoxDecoration(
         border: Border.all(
-          color: Colors.black,
-        ),
-        borderRadius: BorderRadius.circular(0.0),
-      ),
+          color: Colors.transparent,
+        ),*/
+      //borderRadius: BorderRadius.circular(0.0),
+      //),
       child: ExpansionTile(
         backgroundColor: Colors.white,
         title: Row(
           children: <Widget>[
-            Image.asset(
-              ///TODO:
-              "assets/background.jpg",
+            Image.network(
+              image!,
               height: jobImgHeight,
               width: jobImgWidth,
             ),

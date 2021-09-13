@@ -7,7 +7,8 @@ class LearnTile extends StatelessWidget {
   final String? name;
   final String? url;
   final String? image;
-  const LearnTile(this.name, this.url, this.image, {Key? key}) : super(key: key);
+  const LearnTile(this.name, this.url, this.image, {Key? key})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,9 +17,8 @@ class LearnTile extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset(
-            ///TODO:
-            "assets/background.jpg",
+          Image.network(
+            image!,
             height: learnImgHeight,
             width: learnImgWidth,
           ),
