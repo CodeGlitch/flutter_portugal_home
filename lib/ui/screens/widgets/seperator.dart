@@ -6,8 +6,8 @@ class SeperatorRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Divider(
-      color: FlutterPTColors.darkGrey,
-      thickness: 1.0,
+      color: FlutterPTColors.grey,
+      thickness: 0.5,
     );
   }
 }

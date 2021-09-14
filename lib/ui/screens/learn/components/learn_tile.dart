@@ -31,15 +31,18 @@ class LearnTile extends StatelessWidget {
                   ),
             ),
           ),
-          TextButton(
-            onPressed: () {
-              launchURL(url!);
-            },
-            child: Text(
-              "Website >",
-              style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                    color: FlutterPTColors.blue,
-                  ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(textLeftPadding, 0, 0, 0),
+            child: TextButton(
+              onPressed: () {
+                launchURL(url!);
+              },
+              child: Text(
+                "Website >",
+                style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                      color: FlutterPTColors.blue,
+                    ),
+              ),
             ),
           ),
         ],

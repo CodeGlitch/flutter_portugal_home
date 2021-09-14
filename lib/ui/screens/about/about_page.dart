@@ -5,6 +5,7 @@ import 'package:flutter_portugal_home/resources/strings.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/app_bar.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/drawer.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/footer.dart';
+import 'package:flutter_portugal_home/ui/screens/widgets/seperator.dart';
 import 'package:provider/provider.dart';
 
 import 'components/organizer_tile.dart';
@@ -23,11 +24,12 @@ class AboutPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(bodyPadding),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               TopText(aboutTitle, aboutDescription),
+              SeperatorRow(),
               Wrap(
-                /// TODO
                 children: [
                   Container(),
                   for (int i = 0; i < about.data.length; i++) ...[

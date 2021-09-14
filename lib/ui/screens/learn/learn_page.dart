@@ -5,7 +5,9 @@ import 'package:flutter_portugal_home/resources/strings.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/app_bar.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/drawer.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/footer.dart';
+import 'package:flutter_portugal_home/ui/screens/widgets/seperator.dart';
 import 'package:provider/provider.dart';
+
 //import 'package:responsive_grid/responsive_grid.dart';
 
 import 'components/learn_tile.dart';
@@ -24,11 +26,12 @@ class LearnPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(bodyPadding),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               TopText(learnTitle, learnDescription),
+              SeperatorRow(),
               Wrap(
-                /// TODO
                 children: [
                   for (int i = 0; i < learn.data.length; i++) ...[
                     LearnTile(

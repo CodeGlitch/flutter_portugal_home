@@ -25,7 +25,8 @@ class JobsPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(bodyPadding),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               JobOfferContactUs(),
               SeperatorRow(),

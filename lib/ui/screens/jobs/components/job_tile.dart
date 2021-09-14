@@ -3,6 +3,7 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_portugal_home/resources/dimensions.dart';
 import 'package:flutter_portugal_home/resources/style/colors.dart';
 import 'package:flutter_portugal_home/utils/launch_url.dart';
+import 'package:html/dom.dart' as dom;
 
 class JobTile extends StatelessWidget {
   final String? description;
@@ -17,36 +18,52 @@ class JobTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ///TODO:
     return Container(
-      /*decoration: BoxDecoration(
-        border: Border.all(
-          color: Colors.transparent,
-        ),*/
-      //borderRadius: BorderRadius.circular(0.0),
-      //),
       child: ExpansionTile(
         backgroundColor: Colors.white,
-        title: Row(
-          children: <Widget>[
-            Image.network(
-              image!,
-              height: jobImgHeight,
-              width: jobImgWidth,
-            ),
-            Column(
+        title: Column(
+          children: [
+            Row(
               children: <Widget>[
-                Text(
-                  name!,
+                Wrap(
+                  children: [
+                    Image.network(
+                      image!,
+                      height: jobImgHeight,
+                      width: jobImgWidth,
+                    ),
+                  ],
                 ),
-                Text(
-                  description!,
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(jobsTextPadding),
+                    child: Wrap(
+                      children: [
+                        Text(
+                          name!,
+                          style:
+                              Theme.of(context).textTheme.headline5!.copyWith(
+                                    color: FlutterPTColors.black,
+                                  ),
+                        ),
+                        Text(
+                          description!,
+                          style:
+                              Theme.of(context).textTheme.bodyText2!.copyWith(
+                                    color: FlutterPTColors.black,
+                                  ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),
             Column(
               children: <Widget>[
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Text(
                       lastUpdate.toString(),
@@ -70,17 +87,12 @@ class JobTile extends StatelessWidget {
           ],
         ),
         children: <Widget>[
-          /// TODO needs work after update
           Html(
-            //useRichText: true,
-            data: htmlBody,
-            //defaultTextStyle: Theme.of(context).textTheme.bodyText2,
-            //onLinkTap: launchURL,
-            /*linkStyle: Theme.of(context)
-                .textTheme
-                .bodyText2
-                .copyWith(color: FlutterPTColors.blue),*/
-          ),
+              data: htmlBody,
+              onLinkTap: (String? url, RenderContext context,
+                  Map<String, String> attributes, dom.Element? element) {
+                launchURL(url!);
+              }),
         ],
       ),
     );

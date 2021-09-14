@@ -5,6 +5,7 @@ import 'package:flutter_portugal_home/resources/strings.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/app_bar.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/drawer.dart';
 import 'package:flutter_portugal_home/ui/screens/widgets/footer.dart';
+import 'package:flutter_portugal_home/ui/screens/widgets/seperator.dart';
 import 'package:provider/provider.dart';
 
 import 'components/project_tile.dart';
@@ -23,17 +24,22 @@ class ProjectsPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(bodyPadding),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               TopText(projectsTitle, projectsDescription, projectsGitHub),
+              SeperatorRow(),
               for (int i = 0; i < projects.data.length; i++) ...[
-                /// TODO
-                ProjectTile(
-                    i,
-                    projects.data[i].name,
-                    projects.data[i].description,
-                    projects.data[i].url,
-                    projects.data[i].image),
+                Padding(
+                  padding:
+                      const EdgeInsets.fromLTRB(0, 0, 0, projectsBottomPadding),
+                  child: ProjectTile(
+                      i,
+                      projects.data[i].name,
+                      projects.data[i].description,
+                      projects.data[i].url,
+                      projects.data[i].image),
+                ),
               ],
             ],
           ),

@@ -49,7 +49,6 @@ class Footer {
       SizedBox(
         width: MediaQuery.of(context).size.width,
         child: Row(
-          /// TODO:
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(

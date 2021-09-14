@@ -32,8 +32,8 @@ class OrganizerTile extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(textLeftPadding, 0, 0, 0),
             child: Text(
               name!,
-              style: Theme.of(context).textTheme.headline6!.copyWith(
-                    color: FlutterPTColors.blue,
+              style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                    color: FlutterPTColors.black,
                   ),
             ),
           ),
@@ -45,7 +45,7 @@ class OrganizerTile extends StatelessWidget {
                         launchURL(github!);
                       },
                       child: Text(
-                        "Social",
+                        "Github",
                         style: Theme.of(context).textTheme.bodyText2!.copyWith(
                               color: FlutterPTColors.blue,
                             ),
@@ -59,7 +59,7 @@ class OrganizerTile extends StatelessWidget {
                         launchURL(twitter!);
                       },
                       child: Text(
-                        "Social",
+                        "Twitter",
                         textAlign: TextAlign.start,
                         style: Theme.of(context).textTheme.bodyText2!.copyWith(
                               color: FlutterPTColors.blue,
@@ -73,7 +73,7 @@ class OrganizerTile extends StatelessWidget {
                         launchURL(linkedin!);
                       },
                       child: Text(
-                        "Social",
+                        "Linkedin",
                         textAlign: TextAlign.start,
                         style: Theme.of(context).textTheme.bodyText2!.copyWith(
                               color: FlutterPTColors.blue,

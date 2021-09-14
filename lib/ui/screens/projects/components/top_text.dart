@@ -12,7 +12,7 @@ class TopText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Text(
@@ -34,7 +34,7 @@ class TopText extends StatelessWidget {
           child: Text(
             "GITHUB",
             style: Theme.of(context).textTheme.headline6!.copyWith(
-                  color: FlutterPTColors.blue,
+                  color: FlutterPTColors.white,
                 ),
           ),
         ),

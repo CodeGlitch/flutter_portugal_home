@@ -19,16 +19,40 @@ class ProjectTile extends StatelessWidget {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          projectImage(),
-          projectText(context),
+          Expanded(
+            child: Wrap(
+              children: [
+                projectImage(),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Wrap(
+              children: [
+                projectText(context),
+              ],
+            ),
+          ),
         ],
       );
     }
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        projectText(context),
-        projectImage(),
+        Expanded(
+          child: Wrap(
+            children: [
+              projectText(context),
+            ],
+          ),
+        ),
+        Expanded(
+          child: Wrap(
+            children: [
+              projectImage(),
+            ],
+          ),
+        ),
       ],
     );
   }
@@ -68,7 +92,7 @@ class ProjectTile extends StatelessWidget {
           child: Text(
             "GITHUB",
             style: Theme.of(context).textTheme.headline6!.copyWith(
-                  color: FlutterPTColors.blue,
+                  color: FlutterPTColors.white,
                 ),
           ),
         ),
